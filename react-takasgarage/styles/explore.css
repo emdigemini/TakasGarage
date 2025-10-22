@@ -1,0 +1,100 @@
+.explore {
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+}
+
+.explore h2 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.explore-description {
+  color: var(--color-text-muted);
+}
+
+.car-section {
+  display: flex;
+  gap: 30px;
+  margin: 100px 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.car-cards {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+  width: 500px;
+  border-radius: 20px;
+  transition: .3s ease-in;
+}
+
+.car-cards img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .5s ease-in;
+  cursor: pointer;
+}
+
+.car-cards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.car-cards:nth-child(1):hover img,
+.car-cards:nth-child(2):hover img,
+.car-cards:nth-child(3):hover img {
+  transform: scale(1.12);
+}
+
+.car-cards:hover {
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 50px rgb(0, 174, 239, 0.5);
+  background: none;
+}
+
+
+.category-details {
+  position: absolute;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  padding: 40px;
+  gap: 12px;
+  z-index: 2;
+  transition: .4s ease-in;
+}
+
+.category-title {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.category-description {
+  color: var(--color-text-muted);
+}
+
+.category-details a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.car-cards:hover .category-details {
+  bottom: 15px;
+}

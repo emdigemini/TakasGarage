@@ -1,0 +1,169 @@
+:root {
+  /* ======= THEME COLORS ======= */
+  --color-primary: #00AEEF;
+  --color-secondary: #0de509;
+  --color-accent: #FFB400;
+
+  /* ======= BACKGROUND ======= */
+  --color-bg-main: #0F0F0F;      /* Deep black/charcoal background */
+  --color-bg-card: #1A1A1A;      /* Slightly lighter for sections or cards */
+  --color-bg-hover: #222222;     /* Button & hover states */
+
+  /* ======= TEXT COLORS ======= */
+  --color-text-main: #FFFFFF;    /* Main text (bright and clean) */
+  --color-text-muted: #B0B0B0;   /* Secondary text (for descriptions, placeholders) */
+  --color-text-accent: var(--color-primary);
+
+  /* ======= BORDERS & DIVIDERS ======= */
+  --color-border: #2C2C2C;
+
+  /* ======= FEEDBACK COLORS ======= */
+  --color-success: #00C853;      /* Bright green */
+  --color-warning: #FFD600;      /* Warning yellow */
+  --color-error: #FF1744;        /* Red alert color */
+
+  /* ======= SHADOWS & GLOW ======= */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 12px var(--color-primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #Fff;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  user-select: none;
+  z-index: 999;
+}
+
+header .logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+}
+
+.logo .icon i {
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgb(0, 174, 239, 1);
+}
+
+header .logo .webname {
+  transition: .3s ease;
+}
+
+header .logo .webname:hover {
+  text-shadow: 0 0 20px rgb(0, 174, 239, 1);
+  scale: 1.02;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.user-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.user-actions i {
+  font-size: 1.1rem;
+}
+
+.user-actions button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+}
+
+.user-actions .sign-in {
+  border: 1px solid #c2c2c2;
+  color: #c2c2c2;
+  background: #262626;
+  padding: 10px 20px;
+  transition: .3s ease;
+}
+
+.user-actions .sign-in:hover {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.user-actions .cart {
+  color: var(--color-primary);
+  padding: 10px 15px;
+  text-shadow: 0 0 10px #00AEEF;
+  border: 1px solid var(--color-primary);
+  background: #00afef45;
+  transition: .3s ease;
+}
+
+.user-actions .cart:hover {
+  background: #00afef6c;
+}
+
+.user-actions .cart i {
+  font-size: 1.3rem;
+}
+
+/*NAVIGATION BAR ACTIVE*/
+.navbar .active {
+  position: relative;
+}
+
+.navbar .active::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.navbar li {
+  position: relative;
+  color: #c2c2c2;
+  transition: .3s ease-in;
+}
+
+.navbar li:hover {
+  color: #FFF;
+}
+
+.navbar li::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  transition: .5s ease;
+}
+
+.navbar li:hover::before {
+  background: var(--color-primary);
+  width: 100%;
+}
