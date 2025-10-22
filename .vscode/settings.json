@@ -1,3 +1,4 @@
 {
-  "liveServer.settings.multiRootWorkspaceName": "TakasGarage"
+  "liveServer.settings.multiRootWorkspaceName": "TakasGarage",
+  "liveServer.settings.port": 5503
 }
