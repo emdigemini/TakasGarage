@@ -16,11 +16,11 @@ function CarCategory(){
       </p>
 
       <div 
-        className="car-section"
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
-        <div className="car-cards">
+        className="car-section">
+        <div className="car-cards" 
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <img src="../images/normal-cars.jpg"/>
           <div className="category-details">
             <p className="category-title">Normal Cars</p>
@@ -28,7 +28,10 @@ function CarCategory(){
             <a href="#">Explore Now →</a>
           </div>
         </div>
-        <div className="car-cards">
+        <div className="car-cards"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
           <img src="../images/sports-cars.jpg"/>
           <div className="category-details">
             <p className="category-title">Sports Cars</p>
@@ -36,7 +39,10 @@ function CarCategory(){
             <a href="#">Explore Now →</a>
           </div>
         </div>
-        <div className="car-cards">
+        <div className="car-cards"
+          data-aos="fade-up"
+          data-aos-delay="700"
+        >
           <img src="../images/jdm-cars.jpg"/>
           <div className="category-details">
             <p className="category-title">JDM Cars</p>
@@ -52,10 +58,13 @@ function CarCategory(){
 function TopPicked(){
   return (
     <div className="top-picked">
-      <h2>Top Picked</h2>
-      <p className="top-description">Hand-picked premium vehicles for discerning enthusiasts</p>
+      <h2 data-aos="fade-right"
+      >Top Picked</h2>
+      <p className="top-description"
+        data-aos="fade-right"
+      >Hand-picked premium vehicles for discerning enthusiasts</p>
       <div className="top-car-section">
-        <div className="top-car-cards">
+        <div className="top-car-cards" data-aos="fade-right">
           <img src="../images/featured/porsche911-gt3rs.jpg" />
 
           <div className="top-car-details">
@@ -81,7 +90,12 @@ function TopPicked(){
             </div>
           </div>
         </div>
-        <div className="top-car-cards">
+        <div className="top-car-cards"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="20"
+          data-aos-offset="0"
+        >
           <img src="../images/featured/gtr-r34.jpg" />
 
           <div className="top-car-details">
@@ -107,7 +121,7 @@ function TopPicked(){
             </div>
           </div>
         </div>
-        <div className="top-car-cards">
+        <div className="top-car-cards" data-aos="fade-left">
           <img src="../images/featured/lambo-aventador.jpg" />
 
           <div className="top-car-details">
@@ -123,18 +137,35 @@ function TopPicked(){
                 <p>0-60 in 2.8 seconds</p>
               </div>
             </div>
-          </div>
-          <hr />
-         <div className="more-details">
-            <div className="car-price">
-              <p>Starting at</p>
-              <p>$250,000</p>
+            <hr />
+            <div className="more-details">
+              <div className="car-price">
+                <p>Starting at</p>
+                <p>$250,000</p>
+              </div>
+              <button>View Details</button>
             </div>
-            <button>View Details</button>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function CustomizeYourCar(){
+  return (
+    <>
+      <div className="customize-your-car" data-aos="fade-up">
+        <div className="customize-text">
+          <div className="thunder-icon">
+            <i class="bi bi-lightning-charge"></i>
+          </div>
+          <p>Ready to Build Your Dream?</p>
+          <p>Start customizing your sports or JDM car with our advanced builder</p>
+          <button>Start Customizing <i class="bi bi-arrow-right-short"></i></button>
+        </div>
+      </div>
+    </>
   );
 }
 
@@ -143,6 +174,7 @@ export function ExploreCategories() {
     <>
       <CarCategory />
       <TopPicked />
+      <CustomizeYourCar />
     </>
   );
 }

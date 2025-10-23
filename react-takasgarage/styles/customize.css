@@ -1,0 +1,49 @@
+.customize-your-car {
+  min-height: 50vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.customize-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.thunder-icon i {
+  font-size: 4rem;
+  color: var(--color-primary);
+}
+
+.customize-text p:nth-of-type(1){
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.customize-text p:nth-of-type(2){
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+.customize-text button {
+  margin-top: 30px;
+  color: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.customize-text button:hover {
+  box-shadow: inset 0 0 50px #ffffff6a;
+}
