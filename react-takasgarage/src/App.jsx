@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import { NavBar } from "../components/Navbar"
 import { HomePage } from "../pages/HomePage"
 import { BrowsePage } from "../pages/BrowsePage";
+import { AboutPage } from "../pages/AboutPage";
 import { ContactPage } from "../pages/ContactPage";
 import { Footer } from "../components/Footer";
 
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/browse" element={<BrowsePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         <Footer />

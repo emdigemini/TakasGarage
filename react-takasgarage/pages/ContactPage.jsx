@@ -1,41 +1,62 @@
 export function ContactPage() {
   return (
     <div className="contact">
-      <div className="contact__header">
+      <div className="contact__header"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="600"
+      >
         <h1 className="contact__title">Get in Touch</h1>
         <p className="contact__description">
-          Have questions about our cars or customization services? We're here to help you find your perfect ride.
+          Have questions about our cars or customization services? 
+          We're here to help you find your perfect ride.
         </p>
       </div>
 
       <div className="contact__cards">
-        <div className="contact__card">
+        <div className="contact__card"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="300"
+        >
           <div className="contact__card-icon email">
-            <i class="bi bi-envelope"></i>
+            <i className="bi bi-envelope"></i>
           </div>
           <p className="contact__card-title">Email Us</p>
           <p className="contact__card-text">support@gmail.com</p>
           <p className="contact__card-text">sales@gmail.com</p>
         </div>
-        <div className="contact__card">
+        <div className="contact__card"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="400"
+        >
           <div className="contact__card-icon">
-            <i class="bi bi-telephone"></i>
+            <i className="bi bi-telephone"></i>
           </div>
           <p className="contact__card-title">Call Us</p>
           <p className="contact__card-text">+63 912 345 6789</p>
           <p className="contact__card-text">+63 923 456 7890</p>
         </div>
-        <div className="contact__card">
+        <div className="contact__card"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <div className="contact__card-icon location">
-            <i class="bi bi-geo-alt"></i>
+            <i className="bi bi-geo-alt"></i>
           </div>
           <p className="contact__card-title">Visit Us</p>
           <p className="contact__card-text">123 Tanay, Rizal</p>
           <p className="contact__card-text">Brgy. Wawa</p>
         </div>
-        <div className="contact__card">
+        <div className="contact__card"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="600"
+        >
           <div className="contact__card-icon">
-            <i class="bi bi-clock"></i>
+            <i className="bi bi-clock"></i>
           </div>
           <p className="contact__card-title">Business Hours</p>
           <p className="contact__card-text">Monday - Friday: 9AM - 6PM</p>
@@ -43,7 +64,10 @@ export function ContactPage() {
         </div>
       </div>
 
-      <div className="contact__form-section">
+      <div className="contact__form-section"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
         <div className="contact__send-message">
           <p>Send us a Message</p>
           <div className="send-message__full-name">
@@ -89,13 +113,13 @@ export function ContactPage() {
             <div 
               id="message"
               contentEditable={true}
-              className="message-box"
-              placeholder="Type your message here..."
+              className="message-box inactive"
+              onInput={leaveMessage}
             ></div>
           </div>
 
-          <button>
-            <i class="bi bi-send"></i>
+          <button className="send-message">
+            <i className="bi bi-send"></i>
             Send Message
           </button>
 
@@ -127,7 +151,7 @@ export function ContactPage() {
               For urgent matters regarding your vehicle or order, our emergency hotline is available around the clock.
             </p>
             <div className="contact-number">
-              <i class="bi bi-telephone"></i>
+              <i className="bi bi-telephone"></i>
               +63 912 345 6789
             </div>
           </div>
@@ -136,4 +160,13 @@ export function ContactPage() {
       </div>
     </div>
   );
+}
+
+function leaveMessage(e){
+  const messageBox = document.querySelector('.message-box');
+  if(e.currentTarget.textContent.length > 0){
+    messageBox.classList.remove('inactive');
+  } else {
+    messageBox.classList.add('inactive');
+  }
 }
