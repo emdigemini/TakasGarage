@@ -1,9 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import { NavBar } from "../components/Navbar"
 import { HomePage } from "../pages/HomePage"
-import { ExploreCategories } from "../pages/ExploreCategories";
+import { BrowsePage } from "../pages/BrowsePage";
+import { ContactPage } from "../pages/ContactPage";
+import { Footer } from "../components/Footer";
 
 function App() {
   useEffect(() => {
@@ -15,9 +18,15 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <HomePage />
-      <ExploreCategories />
+      <Router>
+        <NavBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/browse" element={<BrowsePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        <Footer />
+      </Router>
     </>
   )
 }

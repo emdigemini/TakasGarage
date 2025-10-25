@@ -1,7 +1,7 @@
 .home {
   background-image: url("../images/home/lambo-home.jpg");
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.44);
+  background-color: rgba(0, 0, 0, 0.55);
   background-blend-mode: darken;
   min-height: 100vh;
   min-width: 100vw;

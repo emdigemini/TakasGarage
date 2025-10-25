@@ -1,4 +1,27 @@
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+
+
 export function NavBar(){
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      const header = document.querySelector('header');
+
+      if(window.scrollY > 100){
+        header.classList.remove('inactive-border');
+        header.classList.add('active-border');
+      } else {
+        header.classList.remove('active-border');
+        header.classList.add('inactive-border');
+      }
+    }
+
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, []);
+  
+
   return (
     <header>
       <div className="logo"
@@ -13,36 +36,48 @@ export function NavBar(){
       </div>
       <nav>
         <ul className="navbar">
-          <li className="active"
+          <li
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="400"
-          >Home</li>
+          >
+            <NavLink className={({isActive}) => (isActive ? "active" : "")} to="/">Home</NavLink>
+          </li>
           <li
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="500"
-          >Browse</li>
+          >
+            <NavLink to="/browse">Browse</NavLink>
+          </li>
           <li
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="600"
-          >Featured</li>
+          >
+            <NavLink to="/featured">Featured</NavLink>
+          </li>
           <li
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="700"
-          >Dashboard</li>
+          >
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </li>
           <li
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="800"
-          >About</li>
+          >
+            <NavLink to="/about">About</NavLink>
+          </li>
           <li
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="900"
-          >Contact</li>
+          >
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
         </ul>
       </nav>
       <div className="user-actions">

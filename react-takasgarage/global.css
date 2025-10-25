@@ -15,7 +15,8 @@
   --color-text-accent: var(--color-primary);
 
   /* ======= BORDERS & DIVIDERS ======= */
-  --color-border: #2C2C2C;
+  --color-border: #484848ab;
+  --color-border-bg: #0e0e0e;
 
   /* ======= FEEDBACK COLORS ======= */
   --color-success: #00C853;      /* Bright green */
@@ -52,6 +53,34 @@ header {
   padding: 20px 40px;
   user-select: none;
   z-index: 999;
+}
+
+header.active-border {
+  border-bottom: 1px solid transparent;
+  animation: fadeIn .8s ease forwards;
+}
+
+header.inactive-border {
+  border-bottom: 1px solid transparent;
+  animation: fadeOut .8s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #00afef92;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    border-color: #00afef92;
+  }
+  100% {
+    border-color: transparent;
+  }
 }
 
 header .logo {
@@ -131,11 +160,12 @@ header nav ul {
 }
 
 /*NAVIGATION BAR ACTIVE*/
-.navbar .active {
+.navbar li .active {
+  color: #00AEEF;
   position: relative;
 }
 
-.navbar .active::before {
+.navbar li .active::before {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -146,7 +176,6 @@ header nav ul {
 
 .navbar li {
   position: relative;
-  color: #c2c2c2;
   transition: .3s ease-in;
 }
 
@@ -166,4 +195,9 @@ header nav ul {
 .navbar li:hover::before {
   background: var(--color-primary);
   width: 100%;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #c2c2c2;
 }

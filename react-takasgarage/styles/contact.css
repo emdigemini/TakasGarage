@@ -1,0 +1,123 @@
+.contact {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  color: #Fff;
+  padding-top: 6rem;
+}
+
+.contact__header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.contact__title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.contact__description {
+  width: 500px;
+  font-size: 18px;
+  color: var(--color-text-muted);
+}
+
+.contact__cards {
+  display: flex;
+  gap: 20px;
+}
+
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--color-border-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+}
+
+.contact__card-icon {
+  font-size: 1.5rem;
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.contact__card-icon.email {
+  background: #0183b397;
+  color: #5ad3ff;
+}
+
+.contact__card-icon.location {
+  background: #8f01b356;
+  color: #e149d9;
+}
+
+.contact__card-title {
+  padding: 12px 0;
+}
+
+.contact__card-text {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.contact__form-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact__send-message {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  background: var(--color-border-bg);
+  border-radius: 20px;
+  padding: 40px;
+  gap: 20px;
+}
+
+.contact__send-message p {
+  font-size: 2rem;
+}
+
+.contact__send-message label {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.contact__send-message input,
+.send-message__subject #subject,
+.send-message__leave-message {
+  border: 1px solid var(--color-border);
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+}
+
+.send-message__full-name {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.first-name, .last-name,
+.send-message__email,
+.send-message__phone,
+.send-message__subject {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.send-message__leave-message {
+  min-height: 300px;
+}
